@@ -1,0 +1,150 @@
+@import "../../scss/mixins";
+@import "../../scss/variable";
+
+.desktop-five-chatango {
+  &-icon {
+    text-align: right;
+
+    & > img {
+      height: 5rem;
+      width: 5rem;
+      margin-top: -3.3rem;
+      margin-right: 1rem;
+      cursor: pointer;
+      @include respond(phone) {
+        margin-right: -1rem;
+      }
+    }
+  }
+}
+
+.deskfive-direaction {
+  margin-bottom: 2rem;
+  @include respond(tab-port) {
+    margin-left: 2.5rem;
+  }
+}
+
+//////////////////////////////////
+/// //////////////////////
+
+.deskfive {
+  @include respond(big-desktop) {
+    width: 1300px;
+    margin: auto;
+  }
+  &-middle {
+    display: flex;
+
+    &-left {
+      padding: 0.4rem 2.5rem;
+      width: 18%;
+      @include respond(big-desktop) {
+        padding: 0rem 0rem;
+      }
+      @include respond(tab-land) {
+        padding-left: 0.5rem;
+      }
+      @include respond(tab-port) {
+        display: none;
+      }
+    }
+    &-middle {
+      width: 64%;
+      @include respond(tab-port) {
+        width: 90%;
+        margin: auto;
+      }
+      &-content {
+        & > center {
+          & > h2 {
+            padding-bottom: 2rem;
+            font-size: 2rem;
+          }
+        }
+
+        &-btngird {
+          margin: 6rem 0rem;
+          display: grid;
+          grid-template-columns: auto auto auto auto;
+          grid-gap: 0.5rem;
+          @include respond(phone) {
+            grid-template-columns: auto auto;
+          }
+        }
+      }
+    }
+    &-right {
+      width: 18%;
+      padding: 0.5rem 2.5rem;
+      @include respond(big-desktop) {
+        padding: 0rem 0rem;
+      }
+      @include respond(tab-land) {
+        padding: 0.2rem 1rem;
+      }
+      @include respond(tab-port) {
+        display: none;
+      }
+    }
+  }
+}
+
+//  BTN for channel style
+
+.channel-btns {
+  background-color: $btn-background;
+  font-weight: 400;
+  border: none;
+  padding: 1rem 1rem;
+  color: $white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    background-color: #d32727;
+  }
+}
+
+.deskfive-middle-middle-content {
+  &-headings {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    & > p {
+      color: gray;
+    }
+    & > h2 {
+      color: white;
+      margin-top: 0.2rem;
+      margin-bottom: 2rem;
+      font-size: 2.4rem;
+      font-weight: 500;
+    }
+  }
+}
+
+//
+.channel-server-btns {
+  margin-top: 1rem;
+
+  & > * {
+    background-color: gray;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 200;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+  &-active {
+    background-color: $btn-background;
+  }
+}

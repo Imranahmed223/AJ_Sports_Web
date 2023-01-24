@@ -1,0 +1,41 @@
+@import "../../scss/variable";
+.dropdown {
+  &-btn {
+    background-color: $gray-dark;
+    // background-color: $btn-background;
+    padding: 0.4rem 1rem;
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 500;
+    border-radius: 5rem;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  &-content {
+    z-index: 10000000;
+    position: absolute;
+  }
+  &-item {
+    background-color: $gray-dark;
+    padding: 0.7rem 1rem;
+    margin: 0.6rem 0rem;
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 500;
+    border-radius: 5rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-transform: uppercase;
+    &:hover {
+      background-color: $btn-background;
+    }
+  }
+}

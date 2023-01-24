@@ -1,0 +1,208 @@
+@import "../../scss/variable";
+@import "../../scss/mixins";
+
+.donate {
+  @include respond(big-desktop) {
+    width: 1300px;
+    margin: auto;
+  }
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0rem;
+  }
+  &-container {
+    width: 35%;
+
+    &-width {
+      background-color: $footer-background;
+      padding: 2rem 2.6rem;
+      border-radius: 1rem;
+      & > h4 {
+        color: white;
+        font-size: 2rem;
+        font-weight: 300;
+        padding-bottom: 0.7rem;
+      }
+    }
+    @include respond(tab-land) {
+      margin-top: 4rem;
+      width: 40%;
+    }
+    @include respond(tab-port) {
+      margin-top: 4rem;
+      width: 65%;
+    }
+    @include respond(phone) {
+      width: 80%;
+    }
+    &-box {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 0.8rem;
+      & > button {
+        background-color: #666769ad;
+        border: none;
+        color: white;
+        padding: 1rem 0rem;
+        cursor: pointer;
+        font-weight: 300;
+      }
+    }
+    &-field {
+      margin-top: 0.8rem;
+      background-color: #666769ad;
+      padding: 1rem 0.8rem;
+      color: white;
+      & > h4 {
+        font-size: 1.4rem;
+        font-weight: 400;
+      }
+    }
+    &-duration {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0.8rem;
+      & > * {
+        background-color: #666769ad;
+        border: none;
+        color: white;
+        padding: 1rem 0rem;
+        cursor: pointer;
+        font-weight: 300;
+        width: 50%;
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+      }
+    }
+    &-or {
+      & > center {
+        color: white;
+        padding: 1rem 0rem;
+        font-size: 1.5rem;
+      }
+    }
+
+    // Pay
+
+    &-pay {
+      margin-top: 1rem;
+      & > button {
+        padding: 1rem 0rem;
+        width: 100%;
+        font-size: 1.3rem;
+        font-weight: 200;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.616);
+        background-color: #03a1ce;
+        border: none;
+        cursor: pointer;
+        & > img {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+      }
+    }
+    &-paypal {
+      margin-top: 1rem;
+      & > button {
+        cursor: pointer;
+
+        padding: 1rem 0rem;
+        width: 100%;
+        font-size: 1.3rem;
+        font-weight: 200;
+        text-transform: uppercase;
+        color: black;
+        background-color: white;
+        border: none;
+        & > img {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+      }
+    }
+    &-bitcoin {
+      margin-top: 1rem;
+      & > button {
+        cursor: pointer;
+
+        padding: 1rem 0rem;
+        width: 100%;
+        font-size: 1.3rem;
+        font-weight: 200;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.616);
+        background-color: #ff940d;
+        border: none;
+        & > img {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+      }
+    }
+    &-stripe {
+      margin-top: 1rem;
+      & > button {
+        cursor: pointer;
+
+        padding: 1rem 0rem;
+        width: 100%;
+        font-size: 1.3rem;
+        font-weight: 200;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.616);
+        background-color: #665bff;
+        border: none;
+        & > img {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+      }
+    }
+    &-share {
+      margin-top: 1rem;
+      & > button {
+        cursor: pointer;
+
+        padding: 1rem 0rem;
+        width: 100%;
+        font-size: 1.3rem;
+        font-weight: 200;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.616);
+        background-color: #01c4fc;
+        border: none;
+        & > img {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+.donate-line {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+
+  & > h4 {
+    color: $light-blue;
+    font-size: 2rem;
+    padding-right: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  &-border {
+    border-bottom: 2px solid $light-blue;
+    width: 100%;
+    padding-right: 1rem;
+  }
+}

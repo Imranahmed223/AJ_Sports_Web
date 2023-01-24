@@ -1,0 +1,114 @@
+@import "../../scss/mixins";
+@import "../../scss/variable";
+.deskone {
+  @include respond(big-desktop) {
+    width: 1300px;
+    margin: auto;
+  }
+  &-middle {
+    display: flex;
+    width: 100%;
+    &-left {
+      @include respond(big-desktop) {
+        padding-left: 0rem;
+      }
+      padding-left: 3.5rem;
+      width: 18%;
+
+      @include respond(tab-land) {
+        padding-left: 0.5rem;
+      }
+      @include respond(tab-port) {
+        display: none;
+      }
+    }
+    &-middle {
+      width: 64%;
+
+      @include respond(tab-port) {
+        width: 96%;
+        margin: auto;
+      }
+    }
+    &-right {
+      width: 18%;
+      padding: 0.5rem 2.5rem;
+      @include respond(big-desktop) {
+        padding: 0rem 0rem;
+      }
+      @include respond(tab-land) {
+        padding: 0.2rem 1rem;
+      }
+      @include respond(tab-port) {
+        display: none;
+      }
+    }
+  }
+}
+
+// for responsive part
+
+.deskone-display {
+  display: none;
+  @include respond(tab-port) {
+    display: block;
+  }
+  &-marquee {
+    width: 50%;
+    margin: auto;
+    @include respond(big-desktop) {
+      // padding-right: 2rem;
+    }
+  }
+  &-container {
+    width: 95%;
+    margin: auto;
+    margin-top: 2rem;
+
+    // Search
+    &-search {
+      margin-top: 2rem;
+
+      display: flex;
+      align-items: center;
+
+      & > input {
+        width: 99%;
+        margin-right: -4.8rem;
+        padding: 1.05rem 0.6rem;
+        // border-radius: 0.6rem;
+        border-radius: 0.5rem;
+        border: none;
+        &:focus {
+          outline: none;
+        }
+        &::placeholder {
+          color: rgba(128, 128, 128, 0.418);
+        }
+      }
+
+      &-icon {
+        cursor: pointer;
+        background-color: $light-blue;
+        padding: 0.89rem 1.55rem;
+        margin-right: 0.4rem;
+        color: white;
+        font-size: 2.2rem;
+        border-bottom-right-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+      }
+    }
+  }
+}
+
+// chat icon fro mobile only
+
+// For Display Non
+.margintop-for-mobile {
+  display: none;
+  @include respond(tab-port) {
+    margin-top: 1.5rem;
+
+    display: block;
+  }
+}

@@ -1,0 +1,82 @@
+@import "../../scss/mixins";
+@import "../../scss/variable";
+
+.news {
+  @include respond(big-desktop) {
+    width: 1300px;
+    margin: auto;
+  }
+  &-line {
+
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+  
+    & > h4 {
+      color: $light-blue;
+      font-size: 2rem;
+      padding-right: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+    &-border {
+      border-bottom: 2px solid $light-blue;
+      width: 100%;
+      // @include respond(tab-port) {
+      //   width: 96%;
+      // }
+    }
+    // @include respond(tab-port) {
+    //   width: 90%;
+    // }
+  }
+  &-middle {
+    display: flex;
+
+    &-left {
+      padding: 0.4rem 2.5rem;
+      width: 18%;
+      @include respond(big-desktop) {
+        padding: 0rem 0rem;
+      }
+      @include respond(tab-land) {
+        padding-left: 0.5rem;
+      }
+      @include respond(tab-port) {
+        display: none;
+      }
+    }
+    &-middle {
+      width: 63%;
+      @include respond(big-desktop) {
+        width: 60%;
+      }
+      @include respond(tab-port) {
+        width: 97%;
+        margin: auto;
+      }
+      &-container {
+        background-color: $footer-background;
+        padding: 2rem 2.5rem;
+        border-radius: 1rem;
+      }
+    }
+    &-right {
+      width: 18%;
+      padding: 0.5rem 2.5rem;
+      @include respond(big-desktop) {
+        padding: 0rem 0rem;
+      }
+      @include respond(tab-land) {
+        padding: 0.2rem 1rem;
+      }
+      @include respond(tab-port) {
+        display: none;
+      }
+    }
+  }
+}

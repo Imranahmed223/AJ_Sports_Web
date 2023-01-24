@@ -1,0 +1,16 @@
+@import "../../scss/mixins";
+
+.middle {
+  width: 90%;
+  margin: auto;
+  @include respond(big-desktop) {
+ width: 94%;
+  }
+
+  @include respond(tab-land) {
+    width: 98%;
+  }
+  @include respond(tab-port) {
+    width: 100%;
+  }
+}

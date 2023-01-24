@@ -1,0 +1,94 @@
+@import "../../scss/variable";
+@import "../../scss/mixins";
+
+.res_menu {
+  margin-top: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid gray;
+  &-container {
+    display: flex;
+    align-items: center;
+    &-live {
+      border-radius: 0.5rem;
+      padding: 0.3rem 1.3rem;
+      font-size: 2.5rem;
+      border: 2px solid $light-blue;
+      color: $light-blue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      & > div {
+        margin-right: 1rem;
+        border-radius: 50%;
+        height: 1.2rem;
+        width: 1.2rem;
+        margin-right: 1.5rem;
+        background-color: $light-blue;
+        animation-name: hbeat;
+        animation-duration: 0.7s;
+        animation-iteration-count: infinite;
+      }
+    }
+    &-menus {
+      display: flex;
+      align-items: center;
+      // align-items: center;
+      justify-content: center;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+      margin-left: 2rem;
+      cursor: grabbing;
+      @include respond(tab-port) {
+        // background-color: red;
+        width: 100%;
+        justify-content: space-between;
+      }
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      &-items {
+        display: flex;
+        align-items: center;
+        & > img {
+          height: 4.5rem;
+          margin-right: 1rem;
+        }
+        & > h2 {
+          color: white;
+          font-size: 2rem;
+          font-weight: 300;
+          margin-right: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+//  Animation
+@keyframes hbeat {
+  0% {
+    transform: scale(0.2);
+    opacity: 0.1;
+  }
+  20% {
+    transform: scale(0.4);
+    opacity: 0.1;
+  }
+  40% {
+    transform: scale(0.6);
+    opacity: 0.1;
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  60% {
+    transform: scale(0.8);
+  }
+  80% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

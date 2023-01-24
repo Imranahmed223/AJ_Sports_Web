@@ -1,0 +1,142 @@
+@import "../../scss/variable";
+@import "../../scss/mixins";
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.8rem;
+  margin-bottom: 0.5rem;
+  @include respond(tab-port) {
+    display: none;
+  }
+  &-bellicon {
+    text-align: right;
+    margin-right: 3rem;
+    @include respond(big-desktop) {
+      margin-right: 12rem;
+    }
+    & > * {
+      font-size: 2rem;
+      color: $light-blue;
+      cursor: pointer;
+    }
+  }
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 2rem;
+    width: 28%;
+    @include respond(tab-land) {
+      width: 30%;
+    }
+  }
+
+  &-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    margin: auto;
+
+    ///////////////
+    /// //// Important
+    padding-left: 3.5rem;
+    @include respond(big-desktop) {
+      // flex-direction: column;
+      margin-left: 9.3rem;
+    }
+
+    @include respond(big-desktop) {
+      padding-left: 0rem;
+    }
+    & > * {
+      &:not(:last-child) {
+        margin-right: 2.2rem;
+        @include respond(big-desktop) {
+          margin-right: 3rem;
+        }
+      }
+    }
+    &-icon {
+      height: 5rem;
+
+      &-flex {
+        // height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        & > img {
+          margin: auto;
+          height: 4.2rem;
+          width: 4.2rem;
+          display: block;
+          margin-bottom: 0.5rem;
+          // display: none;
+        }
+        & > p {
+          color: white;
+          font-size: 1.3rem;
+          font-weight: 500;
+
+          padding-bottom: 0.3rem;
+        }
+        &-line {
+          margin: auto;
+          background-color: $light-blue;
+          height: 2.5px;
+          border-radius: 5px;
+          width: 100%;
+          display: none;
+        }
+        &:hover {
+          .menu-items-icon-flex-line {
+            display: block;
+          }
+        }
+        &:active {
+          .menu-items-icon-flex-line {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu-items-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &-input {
+    & > input {
+      color: black;
+      border: none;
+      padding: 0.3rem 1rem;
+      border-radius: 0.5rem;
+      color: gray;
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        font-size: 1rem;
+        font-weight: 600;
+      }
+    }
+  }
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & > * {
+      margin-left: -2rem;
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: gray;
+      cursor: pointer;
+    }
+  }
+}

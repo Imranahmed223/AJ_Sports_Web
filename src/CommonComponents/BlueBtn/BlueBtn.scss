@@ -1,0 +1,19 @@
+@import "../../scss/variable";
+.blue-btn {
+  color: $white;
+  background-color: $light-blue;
+  border: none;
+  border-radius: 0.5rem;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  text-align: center;
+  transition: 1.5s all;
+  padding: .5rem 2rem;
+  &:hover {
+    // background-color: $dark-blue;
+    background-color: #086e8a;
+    // background-color: red;
+    cursor: pointer;
+  }
+}

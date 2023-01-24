@@ -1,0 +1,7 @@
+@import "../../scss/mixins";
+.left {
+  padding-left: 1rem;
+  @include respond(big-desktop) {
+    padding-left: 0rem;
+  }
+}

@@ -1,0 +1,66 @@
+@import "../../scss/variable";
+@import "../../scss/mixins";
+.progresss {
+  background-color: #0d1317;
+  margin: auto;
+  width: 65%;
+  border-radius: 1rem;
+  padding: 1rem 2.6rem;
+  @include respond(tab-port) {
+    width: 55%;
+  }
+  @include respond(phone) {
+    width: 80%;
+  }
+  & > center {
+    color: white;
+    font-weight: 500;
+    font-size: 1.6rem;
+    @include respond(phone) {
+      font-size: 1.6rem;
+    }
+  }
+  &-container {
+    margin-top: 1rem;
+    &-item {
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      & > p {
+        color: white;
+      }
+      & > img {
+        width: 3.1rem;
+        height: 3.1rem;
+      }
+      // for Second bar
+      &-two {
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & > p {
+          color: white;
+        }
+        & > img {
+          width: 3.1rem;
+          height: 3.1rem;
+        }
+      }
+    }
+  }
+}
+
+.progress {
+  width: 75%;
+  background-color: white;
+  border-radius: 1.5rem;
+  height: 0.8rem;
+
+  &-bar {
+    border-radius: 1.5rem;
+    height: 0.8rem;
+    background-color: $light-blue;
+  }
+}

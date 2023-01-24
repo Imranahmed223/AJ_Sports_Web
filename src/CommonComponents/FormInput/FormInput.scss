@@ -1,0 +1,31 @@
+@import "../../scss/variable";
+.form {
+  &-label {
+    font-size: 15px;
+    color: white;
+    display: block;
+    margin-bottom: 2px;
+    margin-left: 4px;
+  }
+  &-input {
+    width: 100%;
+    background-color: $gray;
+    border-radius: 5px;
+    opacity: 0.4;
+    padding: 1rem 0.5rem;
+    margin-bottom: 20px;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  &-error {
+    position: absolute;
+    margin-top: -20px;
+    margin-left: 4px;
+    color: red;
+    font-size: 12px;
+    font-weight: 300;
+  }
+}

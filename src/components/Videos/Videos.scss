@@ -1,0 +1,19 @@
+@import "../../scss/mixins";
+.video {
+  margin-top: 2rem;
+  & > iframe {
+    height: 50vh;
+    width: 100%;
+    @include respond(big-desktop) {
+      height: 40rem;
+    }
+
+    @include respond(phone) {
+      height: 30vh;
+    }
+
+    @include respond(surface) {
+      height: 23vh;
+    }
+  }
+}

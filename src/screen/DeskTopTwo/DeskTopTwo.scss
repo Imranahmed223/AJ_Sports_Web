@@ -1,0 +1,828 @@
+@import "../../scss/mixins";
+@import "../../scss/variable";
+
+//  marginLeft: "4.8rem",
+//  marginRight: "2.5rem",
+
+#stat-tab-m {
+  margin-left: 3rem;
+  margin-right: 3rem;
+  @include respond(tab-port) {
+    margin-left: 3.8rem;
+    margin-right: 1.5rem;
+  }
+}
+// #first-tab {
+
+//   margin-left: 3.3rem;
+//   @include respond(tab-port) {
+//     margin-left: 1rem;
+//   }
+// }
+
+// For Sever Btns
+.server-btns {
+  margin-top: 0.6rem;
+  display: flex;
+  align-items: center;
+
+  &-s {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    & > * {
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
+  &-e {
+    text-align: right;
+    width: 100%;
+  }
+}
+
+.extendbtn {
+  & > * {
+    padding: 0.7rem 1.5rem;
+    background-color: $gray-dark;
+    color: white;
+    font-weight: 500;
+    border-radius: 5rem;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+}
+
+// ///////////////////////// New Code
+
+// For Direaction
+// .desktwo-direaction {
+//   margin-bottom: 3rem;
+//   @include respond(tab-port) {
+//     margin-top: 2rem;
+//     margin-left: 2.3rem;
+//   }
+// }
+
+// For Chat
+.desktwo-middle-right-chat {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+.desktop-two-chat-icon {
+  // position: fixed;
+  display: none;
+  @include respond(tab-port) {
+    display: block;
+  }
+  &-image {
+    text-align: right;
+    position: sticky;
+    & > img {
+      // position: fixed;
+      position: sticky;
+      height: 4rem;
+      width: 4rem;
+      margin-bottom: -5rem;
+      margin-right: -1rem;
+    }
+  }
+}
+
+////////////////////////////////
+////////////////////////////////
+
+.desktwo {
+  overflow: hidden;
+  @include respond(big-desktop) {
+    width: 1300px;
+    margin: auto;
+  }
+  &-middle {
+    display: flex;
+
+    &-left {
+      @include respond(big-desktop) {
+        padding-left: 0rem;
+      }
+      padding-left: 3.5rem;
+      width: 18%;
+      @include respond(tab-land) {
+        padding-left: 0.5rem;
+      }
+      @include respond(tab-port) {
+        display: none;
+      }
+    }
+    &-middle {
+      width: 64%;
+      @include respond(tab-port) {
+        width: 96%;
+        margin: auto;
+      }
+    }
+    &-right {
+      width: 18%;
+      padding: 0.5rem 2.5rem;
+      @include respond(big-desktop) {
+        padding: 0rem 0rem;
+      }
+      @include respond(tab-land) {
+        padding: 0.2rem 1rem;
+      }
+      @include respond(tab-port) {
+        display: none;
+      }
+    }
+  }
+}
+
+.desktop-middle-middle-margintop {
+  margin-top: 4rem;
+}
+
+#desktopone-tab {
+  color: white;
+  font-size: 1.5rem;
+  outline: none;
+}
+
+// Football Ground
+
+.desktop-middle-middle-margintop {
+  margin-top: 4rem;
+}
+
+.chatoption {
+  margin-top: 18vh;
+
+  & > img {
+    width: 4rem;
+
+    height: 4rem;
+  }
+}
+
+// Side
+
+.red-shirt {
+  margin-right: 2rem;
+}
+.white-shirt {
+  margin-left: 2rem;
+}
+
+//
+
+.flex-div {
+  margin: auto;
+  width: 80%;
+
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+
+  @include respond(phone) {
+    display: flex;
+  }
+}
+
+.field_p {
+  position: relative;
+}
+.field {
+  position: relative;
+  background-color: #59974f;
+  width: 329px;
+
+  @include respond(phone) {
+    width: 150px;
+    height: 175px;
+    overflow: hidden;
+  }
+
+  height: 198px;
+  border: 2px solid white;
+  margin-top: -1px;
+}
+// .down {
+//   /* background-color: #020b11; */
+// }
+.red_player1 {
+  width: 35px;
+  height: 27px;
+  position: absolute;
+  top: 12px;
+  left: 150px;
+  z-index: 111;
+
+  @include respond(phone) {
+    top: 2px;
+    left: 61px;
+
+    & > img {
+      width: 22px;
+      height: auto;
+    }
+
+    & > p {
+      font-size: 10px;
+    }
+  }
+}
+
+.red_player2 {
+  width: 35px;
+  height: 27px;
+  position: absolute;
+  top: 55px;
+  left: 110px;
+  z-index: 111;
+
+  @include respond(phone) {
+    top: 40px;
+    left: 39px;
+
+    & > img {
+      width: 22px;
+      height: auto;
+    }
+
+    & > p {
+      font-size: 10px;
+    }
+  }
+}
+
+.red_player3 {
+  width: 35px;
+  height: 27px;
+  position: absolute;
+  top: 55px;
+  left: 180px;
+  z-index: 111;
+
+  @include respond(phone) {
+    top: 40px;
+    left: 82px;
+
+    & > img {
+      width: 22px;
+      height: auto;
+    }
+
+    & > p {
+      font-size: 10px;
+    }
+  }
+}
+
+.red_player4 {
+  width: 35px;
+  height: 27px;
+  position: absolute;
+  top: 65px;
+  left: 260px;
+  z-index: 111;
+
+  @include respond(phone) {
+    top: 63px;
+    left: 10px;
+
+    & > img {
+      width: 22px;
+      height: auto;
+    }
+
+    & > p {
+      font-size: 10px;
+    }
+  }
+}
+
+.red_player5 {
+  width: 35px;
+  height: 27px;
+  position: absolute;
+  top: 65px;
+  left: 30px;
+  z-index: 111;
+
+  @include respond(phone) {
+    top: 63px;
+    left: 112px;
+
+    & > img {
+      width: 22px;
+      height: auto;
+    }
+
+    & > p {
+      font-size: 10px;
+    }
+  }
+}
+
+.red_player6 {
+  width: 35px;
+  height: 27px;
+  position: absolute;
+  top: 95px;
+  left: 110px;
+  z-index: 111;
+
+  @include respond(phone) {
+    top: 85px;
+    left: 82px;
+
+    & > img {
+      width: 22px;
+      height: auto;
+    }
+
+    & > p {
+      font-size: 10px;
+    }
+  }
+}
+
+.red_player7 {
+  width: 35px;
+  height: 27px;
+  position: absolute;
+  top: 95px;
+  left: 180px;
+  z-index: 111;
+
+  @include respond(phone) {
+    top: 85px;
+    left: 40px;
+    & > img {
+      width: 22px;
+      height: auto;
+    }
+
+    & > p {
+      font-size: 10px;
+    }
+  }
+}
+
+.red_player8 {
+  width: 35px;
+  height: 27px;
+  position: absolute;
+  top: 130px;
+  left: 60px;
+  z-index: 111;
+
+  @include respond(phone) {
+    top: 110px;
+    left: 10px;
+    & > img {
+      width: 22px;
+      height: auto;
+    }
+
+    & > p {
+      font-size: 10px;
+    }
+  }
+}
+
+.red_player9 {
+  width: 35px;
+  height: 27px;
+  position: absolute;
+  top: 130px;
+  left: 150px;
+  z-index: 111;
+
+  @include respond(phone) {
+    top: 114px;
+    left: 62px;
+    & > img {
+      width: 22px;
+      height: auto;
+    }
+
+    & > p {
+      font-size: 10px;
+    }
+  }
+}
+
+.red_player10 {
+  width: 35px;
+  height: 27px;
+  position: absolute;
+  top: 130px;
+  left: 230px;
+  z-index: 111;
+
+  @include respond(phone) {
+    top: 109px;
+    left: 112px;
+    & > img {
+      width: 22px;
+      height: auto;
+    }
+
+    & > p {
+      font-size: 10px;
+    }
+  }
+}
+
+.red_player11 {
+  width: 35px;
+  height: 27px;
+  position: absolute;
+  top: 170px;
+  left: 150px;
+  z-index: 111;
+
+  @include respond(phone) {
+    top: 149px;
+    left: 64px;
+    & > img {
+      width: 22px;
+      height: auto;
+    }
+
+    & > p {
+      font-size: 10px;
+    }
+  }
+}
+
+.white_player11 {
+  width: 35px;
+  height: 27px;
+  position: absolute;
+  top: 205px;
+  left: 150px;
+  z-index: 111;
+
+  @include respond(phone) {
+    top: 182px;
+    left: 65px;
+    & > img {
+      width: 22px;
+      height: auto;
+    }
+
+    & > p {
+      font-size: 10px;
+    }
+  }
+}
+
+.white_player10 {
+  width: 35px;
+  height: 27px;
+  position: absolute;
+  top: 245px;
+  left: 60px;
+  z-index: 111;
+
+  @include respond(phone) {
+    top: 210px;
+    left: 12px;
+    & > img {
+      width: 22px;
+      height: auto;
+    }
+
+    & > p {
+      font-size: 10px;
+    }
+  }
+}
+
+.white_player9 {
+  width: 35px;
+  height: 27px;
+  position: absolute;
+  top: 245px;
+  left: 150px;
+  z-index: 111;
+
+  @include respond(phone) {
+    top: 211px;
+    left: 65px;
+    & > img {
+      width: 22px;
+      height: auto;
+    }
+
+    & > p {
+      font-size: 10px;
+    }
+  }
+}
+
+.white_player8 {
+  width: 35px;
+  height: 27px;
+  position: absolute;
+  top: 245px;
+  left: 230px;
+  z-index: 111;
+
+  @include respond(phone) {
+    top: 210px;
+    left: 113px;
+    & > img {
+      width: 22px;
+      height: auto;
+    }
+
+    & > p {
+      font-size: 10px;
+    }
+  }
+}
+
+.white_player7 {
+  width: 35px;
+  height: 27px;
+  position: absolute;
+  top: 285px;
+  left: 180px;
+  z-index: 111;
+
+  @include respond(phone) {
+    top: 235px;
+    left: 40px;
+    & > img {
+      width: 22px;
+      height: auto;
+    }
+
+    & > p {
+      font-size: 10px;
+    }
+  }
+}
+
+.white_player6 {
+  width: 35px;
+  height: 27px;
+  position: absolute;
+  top: 285px;
+  left: 110px;
+  z-index: 111;
+
+  @include respond(phone) {
+    top: 235px;
+    left: 90px;
+    & > img {
+      width: 22px;
+      height: auto;
+    }
+
+    & > p {
+      font-size: 10px;
+    }
+  }
+}
+
+.white_player5 {
+  width: 35px;
+  height: 27px;
+  position: absolute;
+  top: 300px;
+  left: 30px;
+  z-index: 111;
+
+  @include respond(phone) {
+    top: 260px;
+    left: 12px;
+    & > img {
+      width: 22px;
+      height: auto;
+    }
+
+    & > p {
+      font-size: 10px;
+    }
+  }
+}
+
+.white_player4 {
+  width: 35px;
+  height: 27px;
+  position: absolute;
+  top: 300px;
+  left: 260px;
+  z-index: 111;
+
+  @include respond(phone) {
+    top: 260px;
+    left: 112px;
+    & > img {
+      width: 22px;
+      height: auto;
+    }
+
+    & > p {
+      font-size: 10px;
+    }
+  }
+}
+
+.white_player3 {
+  width: 35px;
+  height: 27px;
+  position: absolute;
+  top: 330px;
+  left: 180px;
+  z-index: 111;
+
+  @include respond(phone) {
+    top: 285px;
+    left: 40px;
+    & > img {
+      width: 22px;
+      height: auto;
+    }
+
+    & > p {
+      font-size: 10px;
+    }
+  }
+}
+
+.white_player2 {
+  width: 35px;
+  height: 27px;
+  position: absolute;
+  top: 330px;
+  left: 110px;
+  z-index: 111;
+
+  @include respond(phone) {
+    top: 285px;
+    left: 84px;
+    & > img {
+      width: 22px;
+      height: auto;
+    }
+
+    & > p {
+      font-size: 10px;
+    }
+  }
+}
+
+.white_player1 {
+  width: 35px;
+  height: 27px;
+  position: absolute;
+  top: 370px;
+  left: 150px;
+  z-index: 111;
+
+  @include respond(phone) {
+    top: 322px;
+    left: 65px;
+    & > img {
+      width: 22px;
+      height: auto;
+    }
+
+    & > p {
+      font-size: 10px;
+    }
+  }
+}
+
+.playerName {
+  margin-top: -5px;
+  color: black;
+  font-size: 12px;
+  /* z-index: 112; */
+}
+
+.circle {
+  position: absolute;
+  top: 165px;
+  left: 130px;
+  height: 70px;
+  width: 70px;
+  z-index: 9999;
+  border-radius: 50%;
+  border: 1px solid white;
+  @include respond(phone) {
+    top: 149px;
+    left: 47px;
+    height: 55px;
+    width: 55px;
+  }
+}
+
+#circle {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+#penalty1 {
+  position: relative;
+  left: 100px;
+  top: -3px;
+  width: 118px;
+  height: 41px;
+  background-color: transparent;
+  border: 2px solid white;
+  z-index: 1;
+
+  @include respond(phone) {
+    position: relative;
+    left: 31px;
+    top: -3px;
+    width: 75px;
+    height: 35px;
+    background-color: transparent;
+    border: 2px solid white;
+    z-index: 1;
+  }
+}
+
+#penalty2 {
+  position: relative;
+  top: 154px;
+  left: 100px;
+  width: 118px;
+  height: 41px;
+  background-color: transparent;
+  border: 2px solid white;
+  z-index: 1;
+
+  @include respond(phone) {
+    position: relative;
+    top: 137px;
+    left: 30px;
+    width: 78px;
+    height: 36px;
+    background-color: transparent;
+    border: 2px solid white;
+    z-index: 1;
+  }
+}
+.name1 {
+  &-item {
+    display: flex;
+    align-items: center;
+    margin-top: 0.8rem;
+
+    & > img {
+      margin-right: 1rem;
+      width: 25px;
+      height: auto;
+    }
+
+    & > p {
+      color: white;
+      font-size: 1.2rem;
+    }
+  }
+}
+// Name Two
+.name2 {
+  &-item {
+    display: flex;
+    align-items: center;
+    margin-top: 0.8rem;
+
+    & > img {
+      margin-right: 1rem;
+      width: 25px;
+      height: auto;
+    }
+
+    & > p {
+      color: white;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.desktoptwo-progress {
+  margin-top: 3rem;
+}
+
+.desktoptwo-subsitutes {
+  & > * {
+    &:not(:last-child) {
+      padding-bottom: 1.5rem;
+    }
+  }
+}

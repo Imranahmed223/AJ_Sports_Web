@@ -1,0 +1,154 @@
+@import "../../scss/mixins";
+@import "../../scss/variable";
+
+.contact {
+  @include respond(big-desktop) {
+    width: 1300px;
+    margin: auto;
+  }
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contactform {
+  width: 30%;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  @include respond(tab-land) {
+    margin-top: 4rem;
+    width: 40%;
+  }
+  @include respond(tab-port) {
+    margin-top: 4rem;
+    width: 65%;
+  }
+  @include respond(phone) {
+    width: 80%;
+  }
+  background-color: $footer-background;
+  padding: 2.5rem 4rem;
+  border-radius: 1rem;
+
+  &-heading {
+    color: $white;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  &-subheading {
+    color: $light-blue;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.contact-information {
+  &-container {
+    width: 27%;
+    margin: auto;
+    padding-bottom: 2rem;
+    @include respond(tab-land) {
+      width: 35%;
+    }
+    @include respond(tab-port) {
+      width: 62%;
+    }
+    @include respond(phone) {
+      width: 80%;
+    }
+    &-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      @include respond(tab-port) {
+        display: block;
+      }
+      &-item {
+        display: flex;
+        align-items: center;
+        @include respond(tab-port) {
+          margin-top: 2rem;
+        }
+        & > img {
+          margin-right: 1rem;
+          height: 1.3rem;
+          @include respond(tab-port) {
+            margin-right: 2.5rem;
+          }
+        }
+        & > p {
+          color: #ffffffb3;
+          font-size: 1rem;
+          font-weight: 400;
+        }
+      }
+    }
+    &-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 80%;
+      margin: auto;
+      @include respond(tab-port) {
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 0;
+      }
+
+      & > img {
+        height: 2rem;
+        margin-bottom: 0.5rem;
+        @include respond(tab-port) {
+          margin-right: 2.5rem;
+        }
+      }
+      & > p {
+        color: #ffffffb3;
+        font-size: 1rem;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+//  disclaimer
+
+.contact-disclamer {
+  padding-top: 2rem;
+  width: 35%;
+  margin: auto;
+  text-align: center;
+
+  @include respond(tab-land) {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    width: 45%;
+  }
+  @include respond(tab-port) {
+    width: 70%;
+  }
+  @include respond(phone) {
+    width: 80%;
+  }
+
+  &-heading {
+    font-size: 2.2rem;
+    color: $white;
+  }
+  &-para {
+    color: white;
+    margin-top: 1.5rem;
+    text-align: justify;
+    @include respond(tab-port) {
+      text-align: justify;
+    }
+    @include respond(phone) {
+      text-align: justify;
+    }
+  }
+}

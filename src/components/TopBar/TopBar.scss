@@ -1,0 +1,419 @@
+@import "../../scss/mixins";
+@import "../../scss//variable";
+
+@include respond(big-desktop) {
+  .nvabar-settings {
+    width: 1300px;
+    margin: auto;
+  }
+}
+
+.topbar {
+  &-topsection {
+    background-image: url("../../assest/topnav.svg");
+    width: 43%;
+    // background-color: red;
+    // height: 5.2rem;
+    height: 40px;
+    background-size: 85%;
+    margin: auto;
+    background-position: top;
+    background-repeat: no-repeat;
+    padding-bottom: 2.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background-color: red;
+    @include respond(surface) {
+      width: 60%;
+      // padding-bottom: 2.8rem;
+      padding-bottom: 0.8rem;
+    }
+    @include respond(big-desktop) {
+      width: 45%;
+      height: 48px;
+      margin-bottom: 0.2rem;
+      padding-bottom: 2rem;
+    }
+
+    @include respond(tab-land) {
+      width: 45%;
+    }
+    &-content {
+      margin-top: 0.5rem;
+      margin-bottom: 0rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #ffffffb1;
+      padding: 0.3rem 0rem;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.2rem;
+      width: 260px;
+      @include respond(surface) {
+        width: 226px;
+        margin-top: 0rem;
+        margin-bottom: 0.7rem;
+      }
+      @include respond(big-desktop) {
+        margin-bottom: 0.7rem;
+      }
+    }
+  }
+
+  @include respond(tab-port) {
+    display: none;
+  }
+  &-languagemenu {
+    width: 13%;
+    margin: auto;
+    padding-top: 0.7rem;
+    padding-bottom: 1.5rem;
+    @include respond(surface) {
+      padding-top: 0.4rem;
+      padding-bottom: 1rem;
+    }
+    &-items {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-around;
+      &-icon {
+        color: white;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          color: $light-blue;
+        }
+      }
+    }
+  }
+  &-navbar {
+    background-color: $footer-background;
+    &-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1rem;
+      width: 85%;
+      margin: auto;
+      @include respond(big-desktop) {
+        width: 100%;
+      }
+      &-logo {
+        & > * {
+          & > img {
+            width: 8rem;
+            height: 10rem;
+            // display: none;
+          }
+        }
+        @include respond(big-desktop) {
+          padding-left: 3.2rem;
+        }
+      }
+
+      &-items {
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        text-align: right;
+        @include respond(big-desktop) {
+          text-align: center;
+          margin-left: 14rem;
+          justify-content: center;
+        }
+        & > * {
+          padding: 0.4rem 1.2rem;
+          font-size: 1.9rem;
+          border-radius: 0.5rem;
+          text-transform: uppercase;
+          font-weight: 500;
+          color: white;
+          background: transparent;
+
+          cursor: pointer;
+          transition: 0.3s ease-in-out;
+
+          &:active {
+            background-color: $light-blue;
+          }
+          &:hover {
+            background-color: #0a82a3;
+          }
+          &:not(:last-child) {
+            margin-right: 2.3rem;
+            @include respond(big-desktop) {
+              margin-right: 2rem;
+            }
+            @include respond(surface) {
+              margin-right: 0.6rem;
+            }
+          }
+        }
+      }
+      &-btns {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        & > * {
+          padding: 0.7rem 1.2rem;
+          border-radius: 0.5rem;
+          cursor: pointer;
+          border: none;
+          font-weight: 500;
+          text-transform: uppercase;
+          font-size: 1.7rem;
+          background-color: $btn-background;
+          color: $white;
+          transition: 0.4s ease-in-out;
+          &:not(:last-child) {
+            margin-right: 1rem;
+            padding: 0.7rem 2rem;
+          }
+
+          &:hover {
+            background-color: #d32727;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ////////////////////
+
+
+.responsive-topbar {
+  display: none;
+  z-index: 1000000;
+  @include respond(tab-port) {
+    display: block;
+    transition: 5s ease;
+    width: 100%;
+    transition: all 0.5s;
+
+    &-top {
+      background-color: #0d1317;
+      z-index: inherit;
+      position: fixed;
+      width: 100%;
+      &-hamburger {
+        margin-top: 0.8rem;
+        font-size: 3.8rem;
+        color: white;
+        cursor: pointer;
+      }
+      &-logo {
+        margin: auto;
+        & > img {
+          padding-right: 4rem;
+          margin-top: 0.5rem;
+          height: 7.5rem;
+          width: 6rem;
+        }
+      }
+    }
+  }
+}
+
+.act {
+  background-color: $light-blue;
+}
+
+// Side Menu
+
+.side_menu {
+  &-active {
+    background-color: #0d1317;
+    // background-color: red;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-y: scroll;
+    position: fixed;
+    width: 100%;
+    z-index: 100000000;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.res-inactive {
+  display: none;
+  position: fixed;
+}
+
+// Responsive scss
+
+.responsive {
+  transition: 5s ease-in-out;
+  transform: translateX(100vh);
+  &divider {
+    border: 0.2px solid #00303e83;
+    width: 100%;
+    margin: 3rem 0rem;
+  }
+
+  &-toggle {
+    float: right;
+    font-size: 3.5rem;
+    cursor: pointer;
+  }
+}
+
+.responsive-topbar-container {
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
+}
+
+//  Contact For Navbar Responsive bar
+.contact-active-none {
+  display: none;
+}
+.contact-active {
+  // For Languages
+  &-language {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & > p {
+      color: white;
+      font-size: 1.6rem;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        color: $light-blue;
+      }
+    }
+  }
+  // For Menu
+  &-menu {
+    margin-top: 2rem;
+    &-item {
+      margin-left: 2.5rem;
+      & > * {
+        color: white;
+        font-size: 1.8rem;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+    }
+    &-divider {
+      border-bottom: 1.5px solid rgba(128, 128, 128, 0.18);
+      margin: 2rem 0rem;
+    }
+  }
+  &-btn {
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-container {
+      & > * {
+        background-color: $light-blue;
+        color: white;
+        font-weight: 450;
+        text-transform: uppercase;
+        font-size: 2.4rem;
+        padding: 0.6rem 1rem;
+        border-radius: 0.8rem;
+
+        &:not(:last-child) {
+          margin-right: 3rem;
+          padding-left: 1.7rem;
+          padding-right: 1.7rem;
+        }
+      }
+    }
+  }
+  &-icons {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & > * {
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+    &-items {
+      & > * {
+        color: white;
+        background-color: rgba(62, 62, 62, 0.781);
+        padding: 0.8rem;
+        font-size: 2.5rem;
+        font-weight: 500;
+        border-radius: 0.5rem;
+        cursor: pointer;
+      }
+    }
+  }
+  &-bottom {
+    &-container {
+      margin-top: 6rem;
+      padding-bottom: 3rem;
+      display: flex;
+      align-items: center;
+
+      &-left {
+        width: 80%;
+        &-item {
+          display: flex;
+          align-items: center;
+          margin-left: 2rem;
+          margin-bottom: 2.5rem;
+          & > img {
+            height: 3.5rem;
+            width: 3.5rem;
+          }
+          & > h3 {
+            color: white;
+            margin-left: 2rem;
+            font-weight: 400;
+            font-size: 1.8rem;
+          }
+        }
+      }
+      &-right {
+        width: 20%;
+
+        &-icon {
+          background-color: red;
+
+          &-chat {
+            & > * {
+              position: fixed;
+              right: 3%;
+              bottom: 40%;
+              cursor: pointer;
+              background-color: #039be5;
+              color: white;
+              font-size: 3.5rem;
+              padding: 1rem;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//Cross Icon
+
+#cross-icons {
+  color: white;
+  font-size: 3.3rem;
+  margin-top: 3rem;
+  margin-left: 1.5rem;
+}

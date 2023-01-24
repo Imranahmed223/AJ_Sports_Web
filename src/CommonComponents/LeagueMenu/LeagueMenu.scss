@@ -1,0 +1,46 @@
+@import "../../scss/mixins";
+.leagueMenu {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  width: 45%;
+  margin: auto;
+    
+  @include respond(tab-land) {
+    width: 70%;
+  }
+  @include respond(phone) {
+    width: 90%;
+  }
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & > * {
+      &:not(:last-child) {
+        margin-right: 2rem;
+        @include respond(phone) {
+          margin-right: 1rem;
+        }
+      }
+    }
+
+    &-img {
+      & > img {
+        height: 5rem;
+        width: 5rem;
+        background-color: black;
+        opacity: 0.4;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        &:hover {
+          opacity: 1;
+        }
+        @include respond(phone) {
+          width: 4rem;
+          height: 4rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import "../../scss/variable";
+@import "../../scss/mixins";
+
+.red-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 0.8rem;
+  background-color: $btn-background;
+  text-transform: uppercase;
+  color: $white;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  @include respond(tab-port) {
+    padding: 0.7rem 1.6rem;
+    font-size: 1rem;
+  }
+  &:hover {
+    background-color: #ff4747c1;
+  }
+}

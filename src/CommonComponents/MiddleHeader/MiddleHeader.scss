@@ -1,0 +1,118 @@
+@import "../../scss/variable";
+@import "../../scss/mixins";
+
+.line-middle-top {
+  &-center {
+    &-league {
+      & > center {
+        & > img {
+          width: 9rem;
+          height: 4rem;
+        }
+      }
+    }
+    &-date {
+      margin-top: 1rem;
+      & > center {
+        & > h5 {
+          color: white;
+          font-size: 1.4rem;
+          font-weight: 500;
+        }
+      }
+    }
+    &-old {
+      & > center {
+        margin-top: 0.8rem;
+        & > h5 {
+          color: white;
+          font-size: 1.4rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  &-vs {
+    margin-top: 2rem;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    &-left {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      & > img {
+        width: 7.5rem;
+        height: 7.5rem;
+        @include respond(tab-port) {
+          width: 6rem;
+          height: 6rem;
+        }
+      }
+      & > h1 {
+        font-size: 2.7rem;
+        margin-left: 2rem;
+        font-weight: 500;
+        @include respond(tab-port) {
+          font-size: 2.2rem;
+          margin-left: 1.7rem;
+        }
+      }
+    }
+    &-middle > p {
+      font-weight: 200;
+      font-size: 1.8rem;
+    }
+    &-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & > img {
+        width: 7.5rem;
+        height: 7.5rem;
+        @include respond(tab-port) {
+          width: 6rem;
+          height: 6rem;
+        }
+      }
+      & > h1 {
+        font-size: 2.7rem;
+        margin-right: 2rem;
+        font-weight: 500;
+        @include respond(tab-port) {
+          font-size: 2.2rem;
+          margin-right: 1.7rem;
+        }
+      }
+    }
+  }
+  &-half {
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+    & > center {
+      color: #4ae96d;
+      font-size: 2rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.line-middle-top-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &-half {
+    margin-top: 2rem;
+    color: #4ae96d;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  &-btn {
+    margin-top: 2rem;
+  }
+}

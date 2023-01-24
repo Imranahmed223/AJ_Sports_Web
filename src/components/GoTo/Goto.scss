@@ -1,0 +1,25 @@
+@import "../../scss/mixins";
+.goto {
+  position: absolute;
+  bottom: 29%;
+  right: 8%;
+    @include respond(surface) {
+      right: 10%;
+     }
+  @include respond(tab-port) {
+    right: 11%;
+    bottom: 24%;
+  }
+  @include respond(phone) {
+    bottom: 24%;
+    right: 11%;
+  }
+  &-icon {
+    position: fixed;
+    height: 3rem;
+    width: 3rem;
+    & > img {
+      cursor: pointer;
+    }
+  }
+}

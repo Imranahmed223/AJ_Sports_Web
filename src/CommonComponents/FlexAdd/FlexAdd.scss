@@ -1,0 +1,47 @@
+@import "../../scss/variable";
+@import "../../scss/mixins";
+
+.flexadd {
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+
+    @include respond(tab-port) {
+      display: none;
+    }
+
+    &-left {
+      width: 40%;
+      &-add {
+        background-color: $add-background;
+        height: 11vh;
+        border-radius: 0.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        @include respond(tab-port) {
+          height: 13vh;
+        }
+      }
+      @include respond(tab-port) {
+        width: 100%;
+      }
+    }
+    &-right {
+      width: 40%;
+
+      &-add {
+        width: 100%;
+        background-color: $add-background;
+        height: 11vh;
+        border-radius: 0.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+      @include respond(tab-port) {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+// @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+@import "./scss/mixins";
+body {
+  font-family: "Roboto Condensed";
+
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(13, 19, 23, 0.953),
+      rgba(13, 19, 23, 0.938)
+    ),
+    url(./assest/backimage.png);
+  background-position: top;
+ 
+}
+
+// .overallbackgroud {
+//   background-image: linear-gradient(
+//       to right bottom,
+//       rgba(13, 19, 23, 0.953),
+//       rgba(13, 19, 23, 0.938)
+//     ),
+//     url(./assest/backimage.png);
+//   background-position: top;
+// }

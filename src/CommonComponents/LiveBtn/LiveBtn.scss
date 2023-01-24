@@ -1,0 +1,51 @@
+@import "../../scss/variable";
+.live-btn {
+  color: $white;
+  background-color: $btn-background;
+  padding: 0.6rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    background-color: #ff4747a8;
+  }
+  display: flex;
+  align-items: center;
+}
+
+.live-btn-rounded {
+  height: 1rem;
+  width: 1rem;
+  background-color: $white;
+  border-radius: 50%;
+  margin-right: 0.8rem;
+  animation: hbeat 0.8s ease-in-out infinite;
+}
+
+@keyframes live {
+  0% {
+    transform: scale(0.2);
+  }
+  20% {
+    transform: scale(0.4);
+  }
+  40% {
+    transform: scale(0.6);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  60% {
+    transform: scale(0.8);
+  }
+  80% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

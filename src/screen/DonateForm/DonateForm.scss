@@ -1,0 +1,37 @@
+@import "../../scss/mixins";
+@import "../../scss/variable";
+
+.donate-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.donateform {
+  width: 25%;
+
+  @include respond(tab-land) {
+    width: 40%;
+  }
+  @include respond(tab-port) {
+    width: 60%;
+  }
+  @include respond(phone) {
+    width: 80%;
+  }
+  background-color: $footer-background;
+  padding: 2.5rem 4rem;
+  border-radius: 1rem;
+
+  &-heading {
+    color: $white;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  &-subheading {
+    color: $light-blue;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}

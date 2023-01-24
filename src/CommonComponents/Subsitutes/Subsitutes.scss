@@ -1,0 +1,60 @@
+@import "../../scss/mixins";
+
+.subsitutes {
+  width: 80%;
+
+  margin: auto;
+  @include respond(tab-port) {
+    width: 60%;
+  }
+  @include respond(phone) {
+    width: 95%;
+  }
+  &-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &-left {
+      display: flex;
+      justify-content: space-around;
+      color: white;
+      &-arrow {
+        display: flex;
+        margin-right: 3rem;
+      }
+      &-name {
+        & > h2 {
+          font-size: 1.4em;
+          font-weight: 400;
+        }
+      }
+    }
+    &-right {
+      display: flex;
+      justify-content: space-around;
+      color: white;
+      &-arrow {
+        display: flex;
+      }
+      &-name {
+        & > h2 {
+          font-size: 1.4rem;
+          font-weight: 400;
+          margin-right: 3rem;
+        }
+      }
+    }
+  }
+}
+
+.fred {
+  color: gray;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 500px) {
+  .subsitutes {
+    width: 90%;
+  }
+}
